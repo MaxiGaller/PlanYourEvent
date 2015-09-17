@@ -23,3 +23,5 @@ class LuckyController extends Controller {
         return new Response( '<html><body>Lucky number: '.$number.'</body></html>' );
     }
 }
+
+?>
