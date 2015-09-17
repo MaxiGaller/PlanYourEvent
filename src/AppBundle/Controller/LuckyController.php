@@ -36,13 +36,9 @@ class LuckyController extends Controller {
             'lucky_number' => rand(0, 100),
         );
 
-        return new Response(
-            json_encode($data),
-            200,
-            array('Content-Type' => 'application/json')
-        );
+        return new JsonResponse($data);
     }
-    
+
 }
 
 ?>
