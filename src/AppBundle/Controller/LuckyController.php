@@ -30,12 +30,13 @@ class LuckyController extends Controller {
     /**
      * @Route("/api/lucky/number")
      */
-    public function apiNumberAction() {
-
+    public function apiNumberAction()
+    {
         $data = array(
             'lucky_number' => rand(0, 100),
         );
 
+        // calls json_encode and sets the Content-Type header
         return new JsonResponse($data);
     }
 
