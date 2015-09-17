@@ -28,16 +28,19 @@ class LuckyController extends Controller {
     }
 
     /**
-     * @Route("/api/lucky/number")
+     * @Route("/lucky/number/{count}")
      */
-    public function apiNumberAction()
+    public function numberAction($count)
     {
-        $data = array(
-            'lucky_number' => rand(0, 100),
-        );
+        $numbers = array();
+        for ($i = 0; $i < $count; $i++) {
+            $numbers[] = rand(0, 100);
+        }
+        $numbersList = implode(', ', $numbers);
 
-        // calls json_encode and sets the Content-Type header
-        return new JsonResponse($data);
+        return new Response(
+            '<html><body>Lucky numbers: '.$numbersList.'</body></html>'
+        );
     }
 
 }
