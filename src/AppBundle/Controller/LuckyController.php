@@ -1,15 +1,3 @@
-<?php
-
-echo 'test';
-
-
-/**
- * Created by PhpStorm.
- * User: MaxiUni
- * Date: 17.09.15
- * Time: 11:34
- */
-
 namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -27,5 +15,3 @@ class LuckyController extends Controller {
         return new Response( '<html><body>Lucky number: '.$number.'</body></html>' );
     }
 }
-
-?>
