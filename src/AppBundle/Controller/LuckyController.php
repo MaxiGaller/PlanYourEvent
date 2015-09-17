@@ -14,12 +14,16 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 class LuckyController extends Controller {
-    
+
     /**
      * @Route("/lucky/number/{count}")
      */
     public function numberAction($count)
     {
+        if !$count {
+            $count = "1";
+        }
+
         $numbers = array();
         for ($i = 0; $i < $count; $i++) {
             $numbers[] = rand(0, 100);
