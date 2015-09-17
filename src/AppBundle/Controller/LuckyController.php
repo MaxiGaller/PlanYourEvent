@@ -1,4 +1,8 @@
 <?php
+
+echo 'test';
+
+
 /**
  * Created by PhpStorm.
  * User: MaxiUni
