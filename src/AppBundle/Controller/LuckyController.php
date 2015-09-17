@@ -16,9 +16,20 @@ use Symfony\Component\HttpFoundation\Response;
 class LuckyController extends Controller {
 
     /**
-     * @Route("/lucky/number/{count}")
+     * @Route("/lucky/number")
      */
     public function numberAction($count)
+    {
+
+        return new Response(
+            '<html><body>Please select a Number!</body></html>'
+        );
+    }
+
+    /**
+     * @Route("/lucky/number/{count}")
+     */
+    public function numberActionWithCount($count)
     {
         if (!$count) {
             $count = "1";
