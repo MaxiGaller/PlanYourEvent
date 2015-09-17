@@ -20,7 +20,7 @@ class LuckyController extends Controller {
      */
     public function numberAction($count)
     {
-        if !$count {
+        if (!$count) {
             $count = "1";
         }
 
